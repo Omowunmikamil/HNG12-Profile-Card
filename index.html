@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="profile-card">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-image">
+            <img
+              src="images/profile-card.jpeg"
+              alt="profile"
+              data-testid="profilePicture"
+            />
+            <h2 data-testid="fullName">Omowunmi Kamiludeen</h2>
+            <p data-testid="jobTitle">frontend Developer</p>
+            <p class="currentLocation" data-testid="currentLocation">
+              Lagos, Nigeria
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Profile Body-->
+        <div class="profile-body">
+          <!-- Profile Bio -->
+          <p data-testid="profileBio">
+            I am a frontend developer passionate about building responsive
+            websites and web applications. I specialize in HTML, CSS,
+            JavaScript, React and TailwindCSS. Fascinated by how things look and
+            work online, I love bringing designs to life—making buttons pop,
+            layouts smooth, and ensuring users don’t rage-quit over a broken UI.
+          </p>
+
+          <!-- Profile contact -->
+          <div class="profile-contact">
+            <h3>Contact Me</h3>
+            <!-- Email -->
+            <p data-testid="emailAddress">balikiskamil@gmail.com</p>
+
+            <!-- Social Media Icons -->
+            <div class="socialLinks" data-testid="socialLinks">
+              <a
+                href="https://github.com/omowunmikamil/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="socialLinks"
+              >
+                <i class="fa fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/omowunmi-kamiludeen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="socialLinks"
+              >
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a
+                href="https://twitter.com/browser_nerd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="socialLinks"
+              >
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+
+            <!-- Profile Footer -->
+            <div
+              class="currentTimeUTC"
+              id="currentTimeUTC"
+              data-testid="currentTimeUTC"
+            >
+              Loading UTC Time...
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    function updateUTCTime() {
+      const now = new Date();
+      document.getElementById("currentTimeUTC").textContent = currentTimeUTC;
+
+      const options = {
+        weekday: "short",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        timeZone: "UTC",
+        timeZoneName: "short",
+      };
+
+      const utcTimeString = new Intl.DateTimeFormat("en-GB", options).format(
+        now
+      );
+      document.getElementById("currentTimeUTC").innerText = utcTimeString;
+    }
+    updateUTCTime();
+    setInterval(updateUTCTime, 1000);
+  </script>
+</html>

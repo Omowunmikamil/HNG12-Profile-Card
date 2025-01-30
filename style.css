@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e8eef8;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Profile Card */
+.profile-card {
+  width: 400px;
+  background: rgb(2, 25, 43);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 2em;
+}
+
+/* Profile Image */
+.profile-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+  border: #03d769 4px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 6px;
+}
+
+/* Profile Header */
+
+.profile-header h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.currentLocation {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+hr {
+  margin: 20px auto;
+  border-radius: 10px;
+  border-top: 3px solid #03d769;
+  width: 70%;
+}
+
+/* Profile Body */
+.profile-body {
+  margin-top: 10px;
+}
+.profile-body p {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.profile-contact h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.profile-contact p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-contact a {
+  color: #fff;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+.profile-contact a {
+  display: inline-block;
+  transition: transform 0s, color 0.3s ease-in-out;
+}
+
+.profile-contact a:hover {
+  color: #03d769;
+  transform: rotate(180deg) scale(1.2) translateY(-2px);
+}
+
+/* Profile Footer */
+.currentTimeUTC {
+  font-size: 16px;
+  margin-top: 30px;
+}
