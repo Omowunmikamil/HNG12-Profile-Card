@@ -98,3 +98,33 @@ hr {
   font-size: 16px;
   margin-top: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .profile-card {
+    width: 300px;
+  }
+  .profile-card img {
+    width: 40%;
+  }
+  .profile-header h2 {
+    font-size: 24px;
+  }
+  .profile-header p {
+    font-size: 14px;
+  }
+  .profile-body p {
+    font-size: 16px;
+  }
+  .profile-contact h3 {
+    font-size: 18px;
+  }
+  .profile-contact p {
+    font-size: 16px;
+  }
+  .profile-contact a {
+    font-size: 16px;
+  }
+  .currentTimeUTC {
+    font-size: 14px;
+  }
+}
