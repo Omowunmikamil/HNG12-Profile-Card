@@ -81,6 +81,7 @@ hr {
   color: #fff;
   margin: 0 6px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .profile-contact a {
